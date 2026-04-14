@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simpleness — Ops</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-white: #FFFFFF; --color-black: #090A08; --color-accent: #89FF58;
+  --color-green-pale: #F6FFEE;
+  --font-family: "Banana Grotesk", "Plus Jakarta Sans", sans-serif;
+  --border: 1px solid rgba(9,10,8,0.08); --radius-lg: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--font-family); background: var(--color-white); color: var(--color-black); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+.header { margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 2px solid var(--color-black); }
+.logo { font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.title { font-size: 3.75rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 1rem; }
+.subtitle { font-size: 1rem; line-height: 1.6; max-width: 560px; }
+
+.section-label { font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.card { border: var(--border); border-radius: var(--radius-lg); padding: 1.5rem; text-decoration: none; color: var(--color-black); transition: box-shadow 0.2s; display: flex; flex-direction: column; }
+.card:hover { box-shadow: 0 2px 12px rgba(9,10,8,0.08); }
+.card-badge { display: inline-block; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 0.75rem; align-self: flex-start; }
+.badge-black { background: var(--color-black); color: var(--color-white); }
+.badge-green { background: var(--color-accent); color: var(--color-black); }
+.card-title { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+.card-desc { font-size: 0.875rem; line-height: 1.55; flex: 1; }
+.card-meta { font-size: 0.75rem; margin-top: 1rem; padding-top: 0.75rem; border-top: var(--border); }
+
+.footer { margin-top: 4rem; padding-top: 2rem; border-top: var(--border); font-size: 0.75rem; }
+
+@media (max-width: 640px) {
+  .title { font-size: 2.25rem; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="logo">Simpleness</div>
+    <h1 class="title">Ops.</h1>
+    <p class="subtitle">Playbooks, designsystem og leveransemaler. Sentraliserte rammeverk som instansieres per kunde.</p>
+  </div>
+
+  <div class="section-label">Playbooks</div>
+  <div class="grid">
+    <a href="https://simpleness-design-system.vercel.app/" class="card">
+      <span class="card-badge badge-green">Design</span>
+      <div class="card-title">Designsystem</div>
+      <div class="card-desc">Farger, typografi, form, fotostil og tone of voice. Base for alle kundeleveranser.</div>
+      <div class="card-meta">7 seksjoner · v0.1 · April 2026</div>
+    </a>
+    <a href="nyhetsbrev.html" class="card">
+      <span class="card-badge badge-black">E-post</span>
+      <div class="card-title">Nyhetsbrev</div>
+      <div class="card-desc">Moduler, maler og flows for e-postleveranser. Velkomstserie, kampanjer, redaksjonelt og digest.</div>
+      <div class="card-meta">8 moduler · 4 maler · 4 flows · April 2026</div>
+    </a>
+    <a href="https://simpleness-design-system.vercel.app/" class="card" style="opacity:0.5;pointer-events:none">
+      <span class="card-badge badge-black">Web</span>
+      <div class="card-title">Landingssider</div>
+      <div class="card-desc">Moduler og templates for landingssider. Skills og arbeidsflyt for produksjon.</div>
+      <div class="card-meta">Kommer</div>
+    </a>
+  </div>
+
+  <div class="footer">Simpleness · simpleness.no</div>
+</div>
+</body>
+</html>
